@@ -24,38 +24,51 @@ struct ContentView: View {
                 Text("حالات كورونا الجديدة")
                     .font(.system(size: 30, weight: .bold, design: .default))
                     .padding()
+                ForEach(people, id: \.id) { i in
+                    VStack{
+                        
+                        Text("\(i.fullName)")
+                        
+                        Text("\(i.area)")
+                        
+                        Text("\(i.numberOfDoses)")
+                        
+                        Divider()
+                    }
+                    
+                    }
                 // name of new cases
-                VStack{
-        // الحالة الأولى
-                // الاسم
-                    Text("\(people[0].fullName)")
-// المنطقة
-                Text("\(people[0].area)")
-                    // عدد الجرعات
-               Text("\(people[0].numberOfDoses)")
-
-                Divider()
-                }
-                VStack{
-        // الحالة الثانية
-                // الاسم
-               Text("\(people[1].fullName)")
-                // المنطقة
-               Text("\(people[1].area)")
-    // عدد الجرعات
-               Text("\(people[1].numberOfDoses)")
-
-                Divider()
-                }
-                VStack{
-              // الحالة الثالثة
-                      // الاسم
-                     Text("\(people[2].fullName)")
-                      // المنطقة
-                     Text("\(people[2].area)")
-          // عدد الجرعات
-                     Text("\(people[2].numberOfDoses)")
-                }
+//                VStack{
+//        // الحالة الأولى
+//                // الاسم
+//                    Text("\(people[0].fullName)")
+//// المنطقة
+//                Text("\(people[0].area)")
+//                    // عدد الجرعات
+//               Text("\(people[0].numberOfDoses)")
+//
+//                Divider()
+//                }
+//                VStack{
+//        // الحالة الثانية
+//                // الاسم
+//               Text("\(people[1].fullName)")
+//                // المنطقة
+//               Text("\(people[1].area)")
+//    // عدد الجرعات
+//               Text("\(people[1].numberOfDoses)")
+//
+//                Divider()
+//                }
+//                VStack{
+//              // الحالة الثالثة
+//                      // الاسم
+//                     Text("\(people[2].fullName)")
+//                      // المنطقة
+//                     Text("\(people[2].area)")
+//          // عدد الجرعات
+//                     Text("\(people[2].numberOfDoses)")
+//                }
                 Spacer()
                 HStack{
                     Text("آخر تحديث ١٥-٣-٢٠٢٢")
