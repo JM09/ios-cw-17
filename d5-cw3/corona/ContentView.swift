@@ -24,7 +24,7 @@ struct ContentView: View {
                 Text("حالات كورونا الجديدة")
                     .font(.system(size: 30, weight: .bold, design: .default))
                     .padding()
-                ForEach(people, id: \.id) { i in
+                List(people, id: \.id) { i in
                     VStack{
                         
                         Text("\(i.fullName)")
